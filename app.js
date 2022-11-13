@@ -1,5 +1,8 @@
 const http = require("http");
 
+
+const PORT = 4000
+
 const server = http.createServer((req,res) => {
     // res.write("Hello World");
     // res.end();
@@ -11,4 +14,5 @@ const server = http.createServer((req,res) => {
     )
 })
 
-server.listen(3001);
+console.log(`Server Running at http://localhost:${PORT}`);
+server.listen(PORT);
