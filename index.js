@@ -14,6 +14,9 @@ const routes = require("./Routes/index")
 
 
 
+app.set('view engine', 'pug')
+
+
 // console.log(routes);
 app.use(routes)
 

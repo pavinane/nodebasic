@@ -11,6 +11,7 @@ books.route('/books')
 .post((req,res) => {
     res.json({data:"Comics are stored in database"})
 })
+
 // this is another type of declare both get and post method
 
 books.get("/books/:id",(req,res) => {
