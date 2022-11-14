@@ -1,4 +1,23 @@
-// console.log(__filename);
-// 0r
+// const EventEmitter = require("events");
+// const myEvent = new EventEmitter();
 
-console.log(global.process.env.TZ);
+
+// myEvent.on("test-event",(data)=>{
+//     console.log("this event is listing");
+//     console.log(data);
+// })
+
+const express = require("express");
+const app = express();
+const PORT  = 4000;
+const routes = require("./Routes/index")
+
+
+
+// console.log(routes);
+app.use(routes)
+
+
+app.listen(PORT,() => {
+    console.log("server created in express js");
+})
