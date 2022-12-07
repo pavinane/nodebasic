@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const books = require("./books");
 const heros = require("./heros");
+const games = require("./games")
 const path = require('path')
 
 // this is get method
@@ -10,10 +11,12 @@ router.get('/',(req,res) => {
     res.send("Hello Express js")
 })
 
-router.use(books)
+router.use('/books',books)
 
 
-router.use(heros)
+router.use('/hero',heros)
+
+router.use('/games',games)
 
 // Post method
 

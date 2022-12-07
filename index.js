@@ -9,13 +9,17 @@
 
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser")
 const PORT  = 4000;
 const routes = require("./Routes/index")
 
 
-
+// declare value through router
 app.set('view engine', 'pug')
 
+// body parser
+
+app.use(bodyParser.json());
 
 // console.log(routes);
 app.use(routes)
